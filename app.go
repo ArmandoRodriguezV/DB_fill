@@ -259,7 +259,7 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	const totalUsers = 5
+	const totalUsers = 100000
 	log.Println("Generando usuarios con huertos coherentes según PlantGen AG...")
 
 	now := time.Now()
@@ -283,7 +283,7 @@ func main() {
 		}
 
 		// Crear huertos (0-4)
-		orchardCount := rand.Intn(5)
+		orchardCount := rand.Intn(3)
 		for j := 0; j < orchardCount; j++ {
 			orchID := primitive.NewObjectID()
 			orchardCreatedAt := randomTimeBetween(userCreatedAt, now)
